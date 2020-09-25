@@ -20,7 +20,7 @@ function Nav() {
     };
 
     return (
-        <header>
+        <header className="flex-row">
             <h2>
                 <a data-testid="link" href="/">
                     <span role="img" aria-label="camera">📸</span> Oh Snap!
@@ -33,7 +33,7 @@ function Nav() {
                             About me
                         </a>
                     </li>
-                    <li>
+                    <li className="mx-2">
                         <span>Contact</span>
                     </li>
                     {categories.map((category) => (
