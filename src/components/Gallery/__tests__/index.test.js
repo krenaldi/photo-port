@@ -1,5 +1,5 @@
 import React from 'react';
-import {render, cleanup} from '@testing-library/react';
+import { render, cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import Gallery from '..';
 
@@ -10,17 +10,17 @@ afterEach(cleanup)
 describe('<Gallery /> is rendering', () => {
 
     it('renders', () => {
-      render(<Gallery currentCategory={portrait} />);
+        render(<Gallery currentCategory={portrait} />);
     });
-  })
 
-  it('matches snapshot', () => {
-      const { asFragment } = render(<Gallery currentCategory={portrait} />);
-      expect(asFragment()).toMatchSnapshot();
-  })
-  
-  it('renders title of <h1> is Portraits', () => {
-      const { getByTestId } = render(<Gallery currentCategory={portrait} />);
-      expect(getByTestId('h1tag')).toHaveTextContent('Portraits');
-  })
-  
+
+    it('matches snapshot', () => {
+        const { asFragment } = render(<Gallery currentCategory={portrait} />);
+        expect(asFragment()).toMatchSnapshot();
+    })
+
+    it('renders title of <h1> is Portraits', () => {
+        const { getByTestId } = render(<Gallery currentCategory={portrait} />);
+        expect(getByTestId('h1tag')).toHaveTextContent('Portraits');
+    })
+})
