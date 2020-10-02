@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Modal from '../Modal';
 
 export default function PhotoList({category}) {
     const [photos] = useState([
@@ -103,6 +104,7 @@ export default function PhotoList({category}) {
     
     return (
         <div>
+            <Modal />
             <div className="flex-row">
                 {currentPhotos.map((image, i) => (
                     <img src={require(`../../assets/small/${category}/${i}.jpg`)} alt={image.name}  className="img-thumbnail mx-1" key={image.name} />
